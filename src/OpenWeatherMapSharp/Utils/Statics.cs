@@ -18,7 +18,10 @@
 
         public static readonly string ForecastCoordinatesUri
             = ForecastBaseUri + "?lat={0}&lon={1}&units={2}&lang={3}&appid={4}";
-        
+
+        public static readonly string DailyForecastCoordinatesUri
+            = ForecastBaseUri + "/daily?lat={0}&lon={1}&units={2}&lang={3}&appid={4}";
+
         public static readonly string ForecastCityUri
             = ForecastBaseUri + "?q={0}&units={1}&lang={2}&appid={3}";
 

@@ -26,6 +26,20 @@ namespace OpenWeatherMapSharp
             Unit unit = Unit.Standard);
 
         /// <summary>
+        ///     Gets 16 day forecast for a location given its longitude and latitude
+        /// </summary>
+        /// <param name="latitude">The latitude of the location</param>
+        /// <param name="longitude">The longitude of the location</param>
+        /// <param name="language">The language used for the response</param>
+        /// <param name="unit">The unit of measurement for the response</param>
+        /// <returns>The OpenWeatherMapServiceResponse containing the forecast information</returns>
+        Task<OpenWeatherMapServiceResponse<ForecastRoot>> GetDailyForecastAsync(
+            double latitude,
+            double longitude,
+            LanguageCode language = LanguageCode.EN,
+            Unit unit = Unit.Standard);
+
+        /// <summary>
         ///     Gets forecast for a location given its city ID
         /// </summary>
         /// <param name="cityId">The ID of the location's city</param>
